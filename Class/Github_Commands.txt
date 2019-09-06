@@ -1,5 +1,8 @@
+git pull (once inside repo folder): update contents of local repository folder from github
+git clone [url]: clone repos from github [from url] to local machine
+
 Staging, committing, and pushing to github
 
-1. git add [name]
-2. git commit -m "[doc notes]"
-3. git push
+1. git add [file/folder]: select a file/folder to add to the push list
+2. git commit -m "[doc notes]": prepare the added file/folder to be pushed; include supplementary comments in [doc notes]
+3. git push: publish committed file/folder to affiliated github page
