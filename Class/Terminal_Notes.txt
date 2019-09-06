@@ -1,4 +1,14 @@
 Notes on Terminal Commands
 
--ls: lists every file/folder in directory
--cd: change directory
+-ls: print list of all (non-hidden) files/folders inside current directory
+	--ls-a: print list of all (including hidden) files/folders inside current directory
+-cd [...]: change directory [to ...]
+	--cd ..: move up one directory in the current path
+	--cd ~: change directory to the root directory
+-pwd: "print working directory"; print path to current directory
+-history: print list of recently used terminal commands
+-mkdir [...]: create a new directory [called ...]
+-rm [...]: remove a file [called ...]
+-rm -r [...]: remove a folder [called ...]
+-cp [a][b]: creates a copy of a file [a], with new name [b]
+-cp -r [a][b]: creates a copy of a folder [a], with new name [b]
