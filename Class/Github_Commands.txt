@@ -1,5 +1,5 @@
 git pull (once inside repo folder): update contents of local repository folder from github
-git clone [url]: clone repos from github [from url] to local machine
+git clone [url]: clone repos from github [from "url"] to local machine
 
 Staging, committing, and pushing to github
 
