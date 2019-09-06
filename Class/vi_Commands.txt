@@ -1,0 +1,8 @@
+Useful vi Commands
+
+(outside of vi) vi [name].txt: initialize a file, or edit an existing one [called "name"]
+i: enable editing
+esc (while editing is enabled): stop editing
+:# (while not editing): bring cursor to # line in file
+:w: write/save file
+:q: quit and return to terminal
