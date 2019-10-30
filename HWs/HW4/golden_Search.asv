@@ -1,0 +1,46 @@
+function N = golden_Search(tol)
+    %  Golden search algorithm for finding the x value (x_min) at which the
+    %  global minimum of a single-valued, unimodal function occurs.
+    %
+    %  Takes 1 input, "tol", the desired error tolerance for the calculated
+    %  value of x_min. Returns number of iterations to meet this tolerance.
+    
+    %  We search for x_min with the interval [a,b]
+    a = 0;
+    b = 2;
+    err = 1;
+    N = 0;
+    
+    while err > tol
+        T = (sqrt(5) - 1)/2;
+        %  For each loop, define "guesses" x_1 and x_2 according to the
+        %  current values of a,b with search step equal to the golden ratio
+        x_1 = a + (1 - T)*(b - a);
+        x_2 = a + T*(b - a);
+        
+        %  Since we are working with a unimodal function f, the relative
+        %  values of f(x_1) and f(x_2) determine where x_min is located
+        %  with respect to x_1 and x_2.
+        %
+        %  If f(x_1) > f(x_2), the minimum cannot be located to the left of
+        %  x_1 (since x_1 is the leftmost point of x_1, x_2), since all x
+        %  values in that region have function values f(x) which are
+        %  greater than f(x_1). Therefore, reduce our search interval by
+        %  setting the lower bound equal to x_1
+        if f(x_1) > f(x_2)
+            a = x_1;
+        elseif f(x_2) >= f(x_1)
+            b = x_2;
+        end
+        
+        err = b - a;
+        N = N + 1;
+    end
+
+
+
+end
+
+function val = f(x)
+    val = 0.5 - x*exp(-x^2);
+end
